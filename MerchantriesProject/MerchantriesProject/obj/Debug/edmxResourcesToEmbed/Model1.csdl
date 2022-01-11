@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MerchantriesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MerchantriesEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(MerchantriesModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(MerchantriesModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SP_CATEGORY_SHOW" ReturnType="Collection(MerchantriesModel.SP_CATEGORY_SHOW_Result)" />
+    <FunctionImport Name="SP_MENUFACTURE_SHOW" ReturnType="Collection(MerchantriesModel.SP_MENUFACTURE_SHOW_Result)" />
+    <FunctionImport Name="SP_PRODUCT_DETAIL_SHOW" ReturnType="Collection(MerchantriesModel.SP_PRODUCT_DETAIL_SHOW_Result)" />
+    <FunctionImport Name="SP_USERDETAIL" ReturnType="Collection(MerchantriesModel.SP_USERDETAIL_Result)" />
+    <EntitySet Name="CategoryDetails" EntityType="MerchantriesModel.CategoryDetail" />
+    <EntitySet Name="ManufactureDetails" EntityType="MerchantriesModel.ManufactureDetail" />
+    <EntitySet Name="ProductDetails" EntityType="MerchantriesModel.ProductDetail" />
+    <EntitySet Name="SalesInfoes" EntityType="MerchantriesModel.SalesInfo" />
+    <EntitySet Name="sysdiagrams" EntityType="MerchantriesModel.sysdiagram" />
+    <EntitySet Name="UserDetails" EntityType="MerchantriesModel.UserDetail" />
+    <AssociationSet Name="FK_ProductDetail_CategoryDetail" Association="MerchantriesModel.FK_ProductDetail_CategoryDetail">
+      <End Role="CategoryDetail" EntitySet="CategoryDetails" />
+      <End Role="ProductDetail" EntitySet="ProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDetail_ManufactureDetail" Association="MerchantriesModel.FK_ProductDetail_ManufactureDetail">
+      <End Role="ManufactureDetail" EntitySet="ManufactureDetails" />
+      <End Role="ProductDetail" EntitySet="ProductDetails" />
+    </AssociationSet>
+    <FunctionImport Name="SP_SALES_INFO_SHOW" ReturnType="Collection(MerchantriesModel.SP_SALES_INFO_SHOW_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_CATEGORY_SHOW_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_MENUFACTURE_SHOW_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ManufactureName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_PRODUCT_DETAIL_SHOW_Result">
+    <Property Type="Int32" Name="Barcode" Nullable="true" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ManufactureName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="PurchasePrice" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="SalesPrice" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="Benefit" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="SP_USERDETAIL_Result">
+    <Property Type="String" Name="S_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="S_Address" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="S_Phone" Nullable="true" />
+    <Property Type="DateTime" Name="S_DateOfBirth" Nullable="true" />
+    <Property Type="DateTime" Name="S_JoinDate" Nullable="true" />
+    <Property Type="Int32" Name="S_NID" Nullable="true" />
+    <Property Type="String" Name="S_Username" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="CategoryDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductDetails" Relationship="MerchantriesModel.FK_ProductDetail_CategoryDetail" FromRole="CategoryDetail" ToRole="ProductDetail" />
+  </EntityType>
+  <EntityType Name="ManufactureDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ManufactureName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductDetails" Relationship="MerchantriesModel.FK_ProductDetail_ManufactureDetail" FromRole="ManufactureDetail" ToRole="ProductDetail" />
+  </EntityType>
+  <EntityType Name="ProductDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barcode" Type="Int32" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManufactureId" Type="Int32" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesPrice" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CategoryDetail" Relationship="MerchantriesModel.FK_ProductDetail_CategoryDetail" FromRole="ProductDetail" ToRole="CategoryDetail" />
+    <NavigationProperty Name="ManufactureDetail" Relationship="MerchantriesModel.FK_ProductDetail_ManufactureDetail" FromRole="ProductDetail" ToRole="ManufactureDetail" />
+  </EntityType>
+  <EntityType Name="SalesInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SelerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelerDate" Type="DateTime" Precision="0" />
+    <Property Name="Ammount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="S_Id" />
+    </Key>
+    <Property Name="S_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="S_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="S_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="S_NID" Type="Int32" />
+    <Property Name="S_DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="S_JoinDate" Type="DateTime" Precision="0" />
+    <Property Name="S_Phone" Type="Int32" />
+    <Property Name="S_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="S_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_ProductDetail_CategoryDetail">
+    <End Type="MerchantriesModel.CategoryDetail" Role="CategoryDetail" Multiplicity="0..1" />
+    <End Type="MerchantriesModel.ProductDetail" Role="ProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDetail_ManufactureDetail">
+    <End Type="MerchantriesModel.ManufactureDetail" Role="ManufactureDetail" Multiplicity="0..1" />
+    <End Type="MerchantriesModel.ProductDetail" Role="ProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ManufactureDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDetail">
+        <PropertyRef Name="ManufactureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="SP_SALES_INFO_SHOW_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="SelerName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="SelerDate" Nullable="true" />
+    <Property Type="Decimal" Name="Ammount" Nullable="true" Precision="19" />
+  </ComplexType>
+</Schema>
