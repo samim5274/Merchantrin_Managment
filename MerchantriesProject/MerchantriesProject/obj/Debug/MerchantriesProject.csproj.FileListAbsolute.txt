@@ -18,3 +18,23 @@ C:\Users\Abdullah  IT  Zone\Desktop\MerchantriesProject\MerchantriesProject\obj\
 C:\Users\Abdullah  IT  Zone\Desktop\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.CreateNewUserForm.resources
 C:\Users\Abdullah  IT  Zone\Desktop\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.LoginForm.resources
 C:\Users\Abdullah  IT  Zone\Desktop\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.SalesForm2.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\MerchantriesProject.exe.config
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.exe
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.pdb
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\MerchantriesProject.exe
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\MerchantriesProject.pdb
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\EntityFramework.dll
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\EntityFramework.SqlServer.dll
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\EntityFramework.xml
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\bin\Debug\EntityFramework.SqlServer.xml
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.csprojResolveAssemblyReference.cache
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.CatrgoryForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.CreateNewUserForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.LoginForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.ManufactureForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.MotherForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.ProductForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.Properties.Resources.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.SalesForm.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.SalesForm2.resources
+E:\Softwer Devolopment\Merchantrin\Merchantrin_Managment\MerchantriesProject\MerchantriesProject\obj\Debug\MerchantriesProject.csproj.GenerateResource.Cache
